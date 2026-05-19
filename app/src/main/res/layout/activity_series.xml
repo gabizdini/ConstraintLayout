@@ -118,44 +118,45 @@
         android:layout_marginTop="8dp"/>
 
     <!-- Controls: replay, play, cast -->
-    <ImageView
-        android:id="@+id/ivReplay"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_replay"
-        android:contentDescription="replay"
-        app:tint="#000000"
-        app:layout_constraintTop_toBottomOf="@id/tvTimeStart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ivPlay"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="32dp"/>
 
     <ImageView
         android:id="@+id/ivPlay"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/ic_play"
-        android:contentDescription="play"
-        app:tint="#000000"
-        app:layout_constraintTop_toBottomOf="@id/tvTimeStart"
-        app:layout_constraintStart_toEndOf="@id/ivReplay"
-        app:layout_constraintEnd_toStartOf="@id/ivCast"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="play"
+        android:src="@drawable/ic_play"
+        app:layout_constraintEnd_toStartOf="@id/ivCast"
+        app:layout_constraintStart_toEndOf="@id/ivReplay"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeStart"
+        app:tint="#000000" />
+
+    <ImageView
+        android:id="@+id/ivReplay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="replay"
+        android:src="@drawable/ic_replay"
+        app:layout_constraintEnd_toStartOf="@id/ivPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeStart"
+        app:tint="#000000" />
 
     <ImageView
         android:id="@+id/ivCast"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/ic_cast"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="76dp"
         android:contentDescription="cast"
-        app:tint="#000000"
-        app:layout_constraintTop_toBottomOf="@id/tvTimeStart"
+        android:src="@drawable/ic_cast"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"/>
+        app:layout_constraintTop_toBottomOf="@id/tvTimeStart"
+        app:tint="#000000" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
