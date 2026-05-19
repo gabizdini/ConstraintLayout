@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_primary"
+        android:text="Constraint Layout Atividade 3"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botão Voltar -->
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VOLTAR"
+        android:backgroundTint="@color/purple_primary"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintTop_toTopOf="@id/tvHeader"
+        app:layout_constraintBottom_toBottomOf="@id/tvHeader"
+        app:layout_constraintEnd_toEndOf="@id/tvHeader"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Left Text Title -->
+    <TextView
+        android:id="@+id/tvTituloEsquerdo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Melhor Texto"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTituloDireito"/>
+
+    <!-- Right Text Title -->
+    <TextView
+        android:id="@+id/tvTituloDireito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Melhor Texto"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toEndOf="@id/tvTituloEsquerdo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Left Text Content -->
+    <TextView
+        android:id="@+id/tvTextoEsquerdo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Morbi in ultricies orci. Pellentesque lobortis facilisis. Etiam ac posuere est, semper venenatis eros. Nam sed tempus non bibendum mi. Lorem vel lectus tellus. Nam aliquct id at maximus. Etiam arcu dui blandita quam, cursus dignissim felis ac ligula."
+        android:textColor="#999999"
+        android:textSize="13sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloEsquerdo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTextoDireito"/>
+
+    <!-- Right Text Content -->
+    <TextView
+        android:id="@+id/tvTextoDireito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mauris eget mi ac enim venenatis. Nam in mauris semper, lacinia mi as, interdum odio. Lorem pretium nunc, posuere vestibulum dignissim vesiendum morbi dictum ornare. Proin ullamcorper ac ligula fells ac faucibus. Aliquam tincidunt est at enim volutpat, vel aliquet velit rutrum. Vestibulum odio interdum sollicitudin ligula dapibus."
+        android:textColor="#999999"
+        android:textSize="13sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloDireito"
+        app:layout_constraintStart_toEndOf="@id/tvTextoEsquerdo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Barrier: align buttons to the lowest text -->
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTexts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvTextoEsquerdo,tvTextoDireito"/>
+
+    <!-- Button: ESQUERDA -->
+
+    <!-- Button: EMPATE -->
+
+    <!-- Button: DIREITA -->
+
+    <Button
+        android:id="@+id/btnEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:backgroundTint="@color/purple_primary"
+        android:text="ESQUERDA"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/btnEmpate"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/tvTextoEsquerdo"
+        app:layout_constraintTop_toBottomOf="@id/barrierTexts" />
+
+    <Button
+        android:id="@+id/btnEmpate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:backgroundTint="@color/purple_primary"
+        android:text="EMPATE"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/btnDireita"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/btnEsquerda"
+        app:layout_constraintTop_toBottomOf="@id/barrierTexts" />
+
+    <Button
+        android:id="@+id/btnDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:backgroundTint="@color/purple_primary"
+        android:text="DIREITA"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/tvTextoDireito"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/btnEmpate"
+        app:layout_constraintTop_toBottomOf="@id/barrierTexts" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
